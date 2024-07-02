@@ -1,0 +1,2 @@
+src/assets/style/theme-base/**/*.scss linguist-vendored
+src/assets/style/themes/**/*.scss linguist-vendored
