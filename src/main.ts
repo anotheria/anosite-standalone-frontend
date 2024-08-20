@@ -4,10 +4,8 @@ import 'primeicons/primeicons.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import PrimeVue from 'primevue/config'
-import Aura from '@primevue/themes/aura'
-import Lara from '@primevue/themes/lara'
-import Nora from '@primevue/themes/nora'
 import ToastService from 'primevue/toastservice'
+import Theme from './presets/theme'
 
 import App from './App.vue'
 import router from './router'
@@ -18,7 +16,7 @@ app.use(createPinia())
 app.use(router)
 app.use(PrimeVue, {
   theme: {
-    preset: Lara,
+    preset: Theme,
     options: {
       darkModeSelector: 'system',
       cssLayer: {

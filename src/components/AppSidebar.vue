@@ -11,8 +11,6 @@ const navigateToRoute = (route: string) => {
   router.push(route)
 }
 
-console.log('sidebar')
-
 interface MenuItemCommand {
   label: string
   route: string
@@ -42,11 +40,6 @@ mockData.views.map((item) => {
     }),
   })
 })
-
-const log = (data: any): boolean => {
-  console.log(data)
-  return true
-}
 </script>
 
 <template>
@@ -73,65 +66,9 @@ const log = (data: any): boolean => {
 
 <style lang="scss">
 .app-sidebar {
-  // background: #292b32;
-  // color: #9d9d9d;
-  // border: none;
-
-  .p-sidebar-content {
-    // padding: 0 0 1.125rem 0;
-  }
-
-  .p-panelmenu-panel {
-    // margin-bottom: 0;
-    // border: none;
-  }
-
-  .p-panelmenu-header-content {
-    // background: #292b32;
-  }
-
-  .p-panelmenu-content {
-    // background: #292b32;
-  }
-
-  .p-panelmenu-header-action,
-  .p-menuitem-content {
-    &:hover {
-      background: #3071b2;
-      .p-menuitem-text,
-      .p-submenu-icon {
-        color: #ffffff;
-      }
-    }
-  }
-
-  .p-panelmenu
-    .p-panelmenu-header:not(.p-disabled):focus-visible
-    .p-panelmenu-header-content
-    .p-panelmenu-header-action {
-    background: #3071b2;
-    .p-menuitem-text,
-    .p-submenu-icon {
-      color: #ffffff;
-    }
-  }
-
-  .p-panelmenu .p-panelmenu-content .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content {
-    background: #3071b2;
-    .p-menuitem-text,
-    .p-submenu-icon {
-      color: #ffffff;
-    }
-  }
-
-  .p-menuitem-text,
-  .p-submenu-icon {
-    color: #9d9d9d;
-  }
-
   .active-route {
     .p-panelmenu-header-action {
-      background: #3883ce;
+      background: var(--p-primary-color);
       .p-menuitem-text,
       .p-submenu-icon {
         color: #ffffff;
@@ -139,7 +76,7 @@ const log = (data: any): boolean => {
     }
 
     .p-panelmenu-item-content {
-      background: #3883ce;
+      background: var(--p-primary-color);
       .p-panelmenu-item-label,
       .p-panelmenu-submenu-icon {
         color: #ffffff;
@@ -150,7 +87,7 @@ const log = (data: any): boolean => {
   .p-panelmenu-panel:has(.active-route) {
     .p-panelmenu-header:not([aria-expanded='true']) {
       .p-panelmenu-header-content {
-        background: #3883ce;
+        background: var(--p-primary-color);
         .p-panelmenu-header-label,
         .p-panelmenu-submenu-icon {
           color: #ffffff;
